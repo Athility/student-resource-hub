@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Timetable - Student Resource Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">EduHub</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="notes.html" class="nav-link">Notes</a></li>
+                <li><a href="timetable.html" class="nav-link active">Timetable</a></li>
+                <li><a href="announcements.html" class="nav-link">Announcements</a></li>
+                <li><a href="links.html" class="nav-link">Important Links</a></li>
+                <li><a href="tips.html" class="nav-link">Study Tips</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="section-title">Weekly Schedule</h1>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Current day is automatically
+            highlighted based on your system time.</p>
+
+        <div style="overflow-x: auto;">
+            <table id="timetable">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:00 - 10:00</td>
+                        <td>Mathematics</td>
+                        <td>Physics</td>
+                        <td>Programming</td>
+                        <td>Chemistry</td>
+                        <td>Mathematics</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 - 11:00</td>
+                        <td>Mathematics</td>
+                        <td>Physics</td>
+                        <td>Programming</td>
+                        <td>Chemistry</td>
+                        <td>History</td>
+                    </tr>
+                    <tr>
+                        <td>11:00 - 11:15</td>
+                        <td colspan="5"
+                            style="background-color: var(--background); color: var(--text-muted); font-style: italic;">
+                            Short Break</td>
+                    </tr>
+                    <tr>
+                        <td>11:15 - 12:15</td>
+                        <td>Programming</td>
+                        <td>Chemistry</td>
+                        <td>Mathematics</td>
+                        <td>Physics</td>
+                        <td>Data Structures</td>
+                    </tr>
+                    <tr>
+                        <td>12:15 - 13:15</td>
+                        <td>Lunch Break</td>
+                        <td>Lunch Break</td>
+                        <td>Lunch Break</td>
+                        <td>Lunch Break</td>
+                        <td>Lunch Break</td>
+                    </tr>
+                    <tr>
+                        <td>13:15 - 14:15</td>
+                        <td>History</td>
+                        <td>Economics</td>
+                        <td>Physics</td>
+                        <td>Programming</td>
+                        <td>Library Session</td>
+                    </tr>
+                    <tr>
+                        <td>14:15 - 15:15</td>
+                        <td>History</td>
+                        <td>Economics</td>
+                        <td>Lab Work</td>
+                        <td>Lab Work</td>
+                        <td>Self Study</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="footer-info">&copy; 2026 Student Resource Hub. Keep tracking your goals!</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

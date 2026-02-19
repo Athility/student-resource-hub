@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Notes - Student Resource Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">EduHub</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="notes.html" class="nav-link active">Notes</a></li>
+                <li><a href="timetable.html" class="nav-link">Timetable</a></li>
+                <li><a href="announcements.html" class="nav-link">Announcements</a></li>
+                <li><a href="links.html" class="nav-link">Important Links</a></li>
+                <li><a href="tips.html" class="nav-link">Study Tips</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container" style="padding-top: 3rem;">
+        <h1 class="section-title">Academic Resources</h1>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Access and download lecture notes
+            for all your subjects.</p>
+
+        <div style="max-width: 600px; margin: 0 auto 3rem auto; position: relative;">
+            <input type="text" id="noteSearch" placeholder="Search subjects (e.g. Mathematics, Physics)..."
+                style="width: 100%; padding: 1rem 1.5rem; border-radius: 50px; border: 1px solid var(--border); box-shadow: var(--shadow); font-size: 1rem; outline: none; transition: var(--transition);">
+            <i class="fas fa-search"
+                style="position: absolute; right: 20px; top: 1.2rem; color: var(--text-muted);"></i>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="grid">
+            <!-- Subject Card 1 -->
+            <div class="card note-card">
+                <span class="card-icon">📐</span>
+                <h3 class="card-title">Advanced Mathematics</h3>
+                <p class="card-desc">Calculus, Linear Algebra, and Differential Equations. Updated for Semester 2.</p>
+                <a href="#" class="btn"><i class="fas fa-file-pdf"></i> View Notes</a>
+            </div>
+
+            <!-- Subject Card 2 -->
+            <div class="card note-card">
+                <span class="card-icon">⚛️</span>
+                <h3 class="card-title">Quantum Physics</h3>
+                <p class="card-desc">Introductory quantum mechanics, wave functions, and atomic structure.</p>
+                <a href="#" class="btn"><i class="fas fa-file-pdf"></i> View Notes</a>
+            </div>
+
+            <!-- Subject Card 3 -->
+            <div class="card note-card">
+                <span class="card-icon">💻</span>
+                <h3 class="card-title">Data Structures</h3>
+                <p class="card-desc">Algorithms, Trees, Graphs, and Hash Tables. Complexity analysis included.</p>
+                <a href="#" class="btn"><i class="fas fa-file-pdf"></i> View Notes</a>
+            </div>
+
+            <!-- Subject Card 4 -->
+            <div class="card note-card">
+                <span class="card-icon">🧪</span>
+                <h3 class="card-title">Organic Chemistry</h3>
+                <p class="card-desc">Reaction mechanisms, functional groups, and molecular geometry.</p>
+                <a href="#" class="btn"><i class="fas fa-file-pdf"></i> View Notes</a>
+            </div>
+
+            <!-- Subject Card 5 -->
+            <div class="card note-card">
+                <span class="card-icon">🌍</span>
+                <h3 class="card-title">World History</h3>
+                <p class="card-desc">Comprehensive timeline of major civilizations and global events.</p>
+                <a href="#" class="btn"><i class="fas fa-file-pdf"></i> View Notes</a>
+            </div>
+
+            <!-- Subject Card 6 -->
+            <div class="card note-card">
+                <span class="card-icon">📈</span>
+                <h3 class="card-title">Macroeconomics</h3>
+                <p class="card-desc">Foundations of economic theory, fiscal policy, and international trade.</p>
+                <a href="#" class="btn"><i class="fas fa-file-pdf"></i> View Notes</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="footer-info">&copy; 2026 Student Resource Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

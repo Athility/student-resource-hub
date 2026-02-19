@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Tips - Student Resource Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .tip-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .tip-card {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-md);
+            background: var(--surface);
+            padding: var(--spacing-lg);
+            border-radius: 12px;
+            margin-bottom: var(--spacing-md);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .tip-card:hover {
+            transform: scale(1.02);
+        }
+
+        .tip-icon {
+            font-size: 2rem;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .tip-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">EduHub</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="notes.html" class="nav-link">Notes</a></li>
+                <li><a href="timetable.html" class="nav-link">Timetable</a></li>
+                <li><a href="announcements.html" class="nav-link">Announcements</a></li>
+                <li><a href="links.html" class="nav-link">Important Links</a></li>
+                <li><a href="tips.html" class="nav-link active">Study Tips</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="section-title">Master Your Studies</h1>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 3rem;">Proven techniques and habits to
+            boost your learning and productivity.</p>
+
+        <div class="tip-container">
+            <!-- Tip 1 -->
+            <div class="tip-card">
+                <div class="tip-icon">⏲️</div>
+                <div class="tip-content">
+                    <h3>The Pomodoro Technique</h3>
+                    <p>Study for 25 minutes, then take a 5-minute break. After four sessions, take a longer break (15-30
+                        mins). This keeps your mind fresh and prevents burnout.</p>
+                </div>
+            </div>
+
+            <!-- Tip 2 -->
+            <div class="tip-card">
+                <div class="tip-icon">🧠</div>
+                <div class="tip-content">
+                    <h3>Active Recall</h3>
+                    <p>Instead of just reading notes, test yourself. Close the book and try to explain the concept in
+                        your own words. This strengthens neural connections.</p>
+                </div>
+            </div>
+
+            <!-- Tip 3 -->
+            <div class="tip-card">
+                <div class="tip-icon">🔁</div>
+                <div class="tip-content">
+                    <h3>Spaced Repetition</h3>
+                    <p>Review your notes at increasing intervals (1 day, 3 days, 1 week, 1 month). This pattern helps
+                        move information from short-term to long-term memory.</p>
+                </div>
+            </div>
+
+            <!-- Tip 4 -->
+            <div class="tip-card">
+                <div class="tip-icon">💤</div>
+                <div class="tip-content">
+                    <h3>Optimize Your Sleep</h3>
+                    <p>Your brain processes information during sleep. Aim for 7-9 hours of quality sleep, especially
+                        before exams, to ensure peak cognitive performance.</p>
+                </div>
+            </div>
+
+            <!-- Tip 5 -->
+            <div class="tip-card">
+                <div class="tip-icon">🧘</div>
+                <div class="tip-content">
+                    <h3>Mindfulness & Breaks</h3>
+                    <p>Take 5-10 minutes to meditate or breathe deeply between study blocks. Reducing stress levels
+                        significantly improves concentration and retention.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="footer-info">&copy; 2026 Student Resource Hub. Study smart, not just hard.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Menu Toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            const icon = navToggle.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    }
+
+    // Active Link Highlighting
+    const currentLocation = location.pathname.split('/').pop() || 'index.html';
+    const menuItems = document.querySelectorAll('.nav-link');
+
+    menuItems.forEach(item => {
+        const itemHref = item.getAttribute('href');
+        if (itemHref === currentLocation) {
+            item.classList.add('active');
+        } else {
+            item.classList.remove('active');
+        }
+    });
+
+    // Notes Filtering Logic (Only run on notes page)
+    const searchInput = document.getElementById('noteSearch');
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.note-card');
+
+            cards.forEach(card => {
+                const title = card.querySelector('.card-title').textContent.toLowerCase();
+                const desc = card.querySelector('.card-desc').textContent.toLowerCase();
+                if (title.includes(term) || desc.includes(term)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    }
+
+    // Timetable Current Day Highlighting (Only run on timetable page)
+    const timetable = document.getElementById('timetable');
+    if (timetable) {
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const currentDay = days[new Date().getDay()];
+
+        // Find header matching current day
+        const headers = timetable.querySelectorAll('th');
+        let dayIndex = -1;
+
+        headers.forEach((th, index) => {
+            if (th.textContent.trim() === currentDay) {
+                th.classList.add('highlight-day');
+                dayIndex = index;
+            }
+        });
+
+        // Highlight cells in that column
+        if (dayIndex !== -1) {
+            const rows = timetable.querySelectorAll('tr');
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                if (cells[dayIndex]) {
+                    cells[dayIndex].classList.add('highlight-column');
+                }
+            });
+        }
+    }
+});
