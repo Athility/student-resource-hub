@@ -17,13 +17,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Active Link Highlighting
-    const currentLocation = location.pathname.split('/').pop() || 'index.html';
-    const menuItems = document.querySelectorAll('.nav-link');
+    // Active Link Highlighting (Handles Clean URLs)
+    let currentLocation = location.pathname.split('/').pop() || 'index';
+    
+    // Remove .html extension if present for comparison
+    if (currentLocation.endsWith('.html')) {
+        currentLocation = currentLocation.replace('.html', '');
+    }
 
+    const menuItems = document.querySelectorAll('.nav-link');
+    
     menuItems.forEach(item => {
-        const itemHref = item.getAttribute('href');
-        if (itemHref === currentLocation) {
+        let itemHref = item.getAttribute('href');
+        if (itemHref.endsWith('.html')) {
+            itemHref = itemHref.replace('.html', '');
+        }
+        
+        if (itemHref === currentLocation || (currentLocation === 'index' && itemHref === 'index')) {
             item.classList.add('active');
         } else {
             item.classList.remove('active');
