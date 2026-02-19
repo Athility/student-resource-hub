@@ -81,7 +81,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const rows = timetable.querySelectorAll('tr');
             rows.forEach(row => {
                 const cells = row.querySelectorAll('td');
-                if (cells[dayIndex]) {
+
+                // Handle rows with colspan (e.g., Short Break)
+                if (cells.length === 2 && cells[1].hasAttribute('colspan')) {
+                    cells[1].classList.add('highlight-column');
+                } else if (cells[dayIndex]) {
                     cells[dayIndex].classList.add('highlight-column');
                 }
             });
