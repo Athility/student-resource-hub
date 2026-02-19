@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const title = card.querySelector('.card-title').textContent.toLowerCase();
                 const desc = card.querySelector('.card-desc').textContent.toLowerCase();
                 if (title.includes(term) || desc.includes(term)) {
-                    card.style.display = 'block';
+                    card.style.display = 'flex'; // Changed to flex to match card layout
                 } else {
                     card.style.display = 'none';
                 }
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let dayIndex = -1;
 
         headers.forEach((th, index) => {
-            if (th.textContent.trim() === currentDay) {
+            if (th.textContent.trim().toLowerCase() === currentDay.toLowerCase()) {
                 th.classList.add('highlight-day');
                 dayIndex = index;
             }

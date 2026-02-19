@@ -19,25 +19,41 @@
             gap: var(--spacing-md);
             background: var(--surface);
             padding: var(--spacing-lg);
-            border-radius: 12px;
+            border-radius: 20px;
             margin-bottom: var(--spacing-md);
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-sm);
             transition: var(--transition);
+            border: 1px solid var(--border);
         }
 
         .tip-card:hover {
-            transform: scale(1.02);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--brand);
         }
 
         .tip-icon {
             font-size: 2rem;
-            min-width: 50px;
-            text-align: center;
+            min-width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--background);
+            border-radius: 16px;
+            color: var(--brand);
+            transition: var(--transition);
+        }
+
+        .tip-card:hover .tip-icon {
+            background-color: var(--brand);
+            color: white;
         }
 
         .tip-content h3 {
             color: var(--primary);
             margin-bottom: 0.5rem;
+            font-weight: 700;
         }
     </style>
 </head>
@@ -46,7 +62,9 @@
 
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="nav-logo">EduHub</a>
+            <a href="index" class="nav-logo">
+                <i class="fas fa-graduation-cap"></i> EduHub
+            </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index" class="nav-link">Home</a></li>
                 <li><a href="notes" class="nav-link">Notes</a></li>
@@ -69,51 +87,46 @@
         <div class="tip-container">
             <!-- Tip 1 -->
             <div class="tip-card">
-                <div class="tip-icon">⏲️</div>
+                <div class="tip-icon"><i class="fas fa-clock"></i></div>
                 <div class="tip-content">
                     <h3>The Pomodoro Technique</h3>
-                    <p>Study for 25 minutes, then take a 5-minute break. After four sessions, take a longer break (15-30
-                        mins). This keeps your mind fresh and prevents burnout.</p>
+                    <p>Study for 25 minutes, then take a 5-minute break. This deep-work strategy prevents cognitive fatigue and maintains high focus levels throughout your session.</p>
                 </div>
             </div>
 
             <!-- Tip 2 -->
             <div class="tip-card">
-                <div class="tip-icon">🧠</div>
+                <div class="tip-icon"><i class="fas fa-brain"></i></div>
                 <div class="tip-content">
                     <h3>Active Recall</h3>
-                    <p>Instead of just reading notes, test yourself. Close the book and try to explain the concept in
-                        your own words. This strengthens neural connections.</p>
+                    <p>Testing yourself instead of re-reading is the single most effective way to learn. Closing the book and summarizing forces your brain to retrieve and strengthen memory paths.</p>
                 </div>
             </div>
 
             <!-- Tip 3 -->
             <div class="tip-card">
-                <div class="tip-icon">🔁</div>
+                <div class="tip-icon"><i class="fas fa-redo"></i></div>
                 <div class="tip-content">
                     <h3>Spaced Repetition</h3>
-                    <p>Review your notes at increasing intervals (1 day, 3 days, 1 week, 1 month). This pattern helps
-                        move information from short-term to long-term memory.</p>
+                    <p>Leverage the 'forgetting curve' by reviewing topics at increasing intervals. This optimization moves knowledge from short-term to permanent long-term storage.</p>
                 </div>
             </div>
 
             <!-- Tip 4 -->
             <div class="tip-card">
-                <div class="tip-icon">💤</div>
+                <div class="tip-icon"><i class="fas fa-bed"></i></div>
                 <div class="tip-content">
-                    <h3>Optimize Your Sleep</h3>
-                    <p>Your brain processes information during sleep. Aim for 7-9 hours of quality sleep, especially
-                        before exams, to ensure peak cognitive performance.</p>
+                    <h3>The Sleep Advantage</h3>
+                    <p>Memory consolidation happens during deep REM sleep. Prioritizing 7-9 hours of rest isn't lazy; it's a vital part of your academic success strategy.</p>
                 </div>
             </div>
 
             <!-- Tip 5 -->
             <div class="tip-card">
-                <div class="tip-icon">🧘</div>
+                <div class="tip-icon"><i class="fas fa-spa"></i></div>
                 <div class="tip-content">
-                    <h3>Mindfulness & Breaks</h3>
-                    <p>Take 5-10 minutes to meditate or breathe deeply between study blocks. Reducing stress levels
-                        significantly improves concentration and retention.</p>
+                    <h3>Mindfulness & Recovery</h3>
+                    <p>Brief periods of meditation or deep breathing between blocks lower cortisol and clear your mental cache, significantly improving information retention.</p>
                 </div>
             </div>
         </div>
