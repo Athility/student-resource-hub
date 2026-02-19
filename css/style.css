@@ -374,3 +374,52 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Tips Page Styles */
+.tip-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tip-card {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    background: var(--surface);
+    padding: var(--spacing-lg);
+    border-radius: 20px;
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid var(--border);
+}
+
+.tip-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--brand);
+}
+
+.tip-icon {
+    font-size: 2rem;
+    min-width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+    border-radius: 16px;
+    color: var(--brand);
+    transition: var(--transition);
+}
+
+.tip-card:hover .tip-icon {
+    background-color: var(--brand);
+    color: white;
+}
+
+.tip-content h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
